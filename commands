@@ -1,0 +1,4 @@
+Run python script and save output logs to LOG folder with name 
+
+#!/bin/bash
+python script.py >> LOG/"$(date +"%FT%H%M").log"
