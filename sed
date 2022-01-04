@@ -1,9 +1,3 @@
-SED is "stream editor". Common use of SED command in UNIX is for substitution or for find and replace
-
-Syntax:
-sed OPTIONS... [SCRIPT] [INPUTFILE...] 
-
-Examples:
 Замените первое вхождение регулярного выражения в каждой строке файла:
 sed 's/{{regex}}/{{replace}}/' {{filename}}
 
@@ -16,7 +10,6 @@ sed -i 's/{{find}}/{{replace}}/g' {{filename}}
 Заменить только строки, соответствующие шаблону line_pattern:
 sed '/{{line_pattern}}/s/{{find}}/{{replace}}/' {{filename}}
 
-Примеры из проекта (тестового, -i - редактирование "на месте")
 Добавить строчку "my-services", на 123 строку файла info.json
 sed -i '123a "my-services",' /usr/share/nginx/html/brand/info.json
 
@@ -25,4 +18,3 @@ sed -i "s|__I18N_HASH__|${CI_COMMIT_SHA}|"  src/environments/environment.prod.ts
 
 Change from 123 to {"id":"123"}
 cat file.txt | sed -e 's/^/{"id":"/' -e 's/$/"}/'
-
