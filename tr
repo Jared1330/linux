@@ -1,10 +1,2 @@
-tr - translate or delete characters
-
-tr [OPTION]... SET1 [SET2]
-
-Example: 
-Remove all letter in lower case
-tr -d [:lower:]
-
 Remove new lines
 cat file.txt | tr '[\n]' '[\0]'
